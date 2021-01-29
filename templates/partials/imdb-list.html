@@ -1,0 +1,14 @@
+<h1>${title}</h1>
+
+<div class="output">
+    <p>${data.map(imdb => `<ul>
+        <li><a href='./imdb/${imdb.imdbID}'><img src="${imdb.Poster.replace('http:', 'https:')}" alt="${imdb.Title} poster" /></a></li>
+        <li>${imdb.Title}</li>
+        <li class="imdb-logo">${imdb.Year} | ${imdb.Rated} | <img src="../images/IMDbLogo.png"/> :  ${imdb.imdbRating}</li>
+        <li><a href='./imdb/${imdb.imdbID}'>Read More</a></li>
+    </ul>`).join('')}</p>
+</div>
+
+    
+
+
